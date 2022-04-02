@@ -1,9 +1,9 @@
 import axios from "axios";
 
-const BASE_PATH = "https://83821aee-8ef5-4ef6-8866-6be6ee9a8149.mock.pstmn.io";
+const BASE_PATH = "http://localhost:8080";
 const TIMEOUT = 5000;
 
-export const getParcel = (parcelNumber) => {
+export const getParcel = (trackingNumber) => {
     const config = {
         headers: {
             "Access-Control-Allow-Origin": BASE_PATH,
@@ -13,5 +13,35 @@ export const getParcel = (parcelNumber) => {
         timeout: TIMEOUT,
     };
 
-    return axios.get(BASE_PATH + `/api/parcel/${parcelNumber}`, config);
+    return axios.get(BASE_PATH + `/parcels/${trackingNumber}`, config);
+};
+
+export const carrierLogin = (user, password) => {
+    const config = {
+        headers: {
+            "Access-Control-Allow-Origin": BASE_PATH,
+            "Content-Type": "application/json",
+            Accept: "application/json",
+            User: user,
+            Password: password
+        },
+        timeout: TIMEOUT,
+    };
+
+    return axios.get(BASE_PATH + `/carriers`, config);
+};
+
+
+export const loadParcels = (parcels) => {
+    const config = {
+        headers: {
+            "Access-Control-Allow-Origin": BASE_PATH,
+            "Content-Type": "application/json",
+            Accept: "application/json",
+        },
+        body: parcels,
+        timeout: TIMEOUT,
+    };
+
+    return axios.get(BASE_PATH + `/parcels`, config);
 };
