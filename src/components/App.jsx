@@ -7,13 +7,9 @@ import '../antStyles.css'
 import RecipientHome from "./recipient/RecipientHome";
 import CarrierHome from "./carrier/CarrierHome";
 
-function callback(key) {
-    console.log(key);
-}
-
 const App = () => (
     <>
-        <Tabs centered defaultActiveKey="1" onChange={callback}>
+        <Tabs centered defaultActiveKey="1">
             <TabPane tab="Soy receptor" key="1">
                 <RecipientHome/>
             </TabPane>
