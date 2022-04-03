@@ -8,7 +8,7 @@ const CarrierLogin = ({credentials, setCredentials, checkCredentials, setUser, s
             <Col span={8}/>
             <Col span={8}>
                 <Space direction="vertical" align="center" size="large" style={{display: 'flex'}}>
-                    {credentials !== undefined && <Alert message="Las credenciales introducidas son incorrectas" type="error"/>}
+                    {credentials !== undefined && <Alert message="Las credenciales introducidas son incorrectas" type="error" className="alert"/>}
                     <Input
                         size="large"
                         placeholder="Usuario"
@@ -16,15 +16,15 @@ const CarrierLogin = ({credentials, setCredentials, checkCredentials, setUser, s
                         onChange={event => {
                             setUser(event.target.value)
                             setCredentials(undefined)
-                        }}/>
+                        } }className="bar"/>
                     <Input.Password
                         size="large"
                         placeholder="Contraseña"
                         onChange={event => {
                             setPassword(event.target.value)
                             setCredentials(undefined)
-                        }}/>
-                    <Button type="primary"  size="large" onClick={() => checkCredentials()}>Login</Button>
+                        }} className="bar"/>
+                    <Button type="primary"  size="large" onClick={() => checkCredentials()} className= "boton">Login</Button>
                 </Space>
             </Col>
             <Col span={8}/>

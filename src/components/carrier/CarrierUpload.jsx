@@ -4,7 +4,7 @@ import CarrierDragger from "./CarrierDragger";
 
 const CarrierUpload = ({carrierName, setCredentials}) => {
     const [uploadOK, setUploadOK] = useState()
-
+    
     return (
         <>
             <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
@@ -16,7 +16,7 @@ const CarrierUpload = ({carrierName, setCredentials}) => {
                             subTitle="Sus receptores podrán consultar el estado de sus paquetes a partir de ahora"
                             extra={[
                                 <Button type="primary" key="console"
-                                        onClick={() => setCredentials(false)}>Salir</Button>
+                                        onClick={() => setCredentials(false)} className="boton">Salir</Button>
                             ]}
                         />
                         : <CarrierDragger carrierName={carrierName} uploadOK={uploadOK} setUploadOK={setUploadOK}/>
@@ -25,7 +25,7 @@ const CarrierUpload = ({carrierName, setCredentials}) => {
             </div>
             <Divider/>
             <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-                <Button type="primary" danger onClick={() => setCredentials(null)}>Salir</Button>
+                <Button type="primary" danger onClick={() => setCredentials(null)} className="boton">Salir</Button>
             </div>
         </>
     )
