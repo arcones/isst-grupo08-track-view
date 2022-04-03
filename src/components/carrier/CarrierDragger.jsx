@@ -49,7 +49,7 @@ const CarrierDragger = ({carrierName, uploadOK, setUploadOK}) => {
                     status="warning"
                     title="Ha habido problemas al cargar sus archivos"
                     extra={
-                        <Button type="primary" key="console" onClick={() => setUploadOK(undefined)}>
+                        <Button type="primary" key="console" onClick={() => setUploadOK(undefined)} className="boton">
                             Volver a intentarlo
                         </Button>
                     }

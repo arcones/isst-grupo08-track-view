@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {Button, Layout, Result, Tabs} from 'antd';
+import {Layout, Result, Tabs} from 'antd';
 import '../antStyles.css'
 import RecipientHome from "./recipient/RecipientHome";
 import CarrierHome from "./carrier/CarrierHome";
@@ -23,13 +23,12 @@ const App = () => {
 
     return (<>
         {serverHealth ?
-
             <Layout>
                 <Header theme="light">
                     <Text className="big-text">🚚 Trackermaster</Text>
                 </Header>
                 <Content theme="light" className="font" style={{backgroundColor: "#ffffff"}}>
-                    <Tabs centered size="large" defaultActiveKey="1">
+                    <Tabs centered size="large" defaultActiveKey="1" className="tabs">
                         <TabPane tab="Soy receptor/a" key="1">
                             <RecipientHome/>
                         </TabPane>
@@ -41,7 +40,9 @@ const App = () => {
                 <Footer className="font" style={{textAlign: 'center', backgroundColor: "#ffffff"}}>
                     ISST - Grupo08 - Curso 2021/22
                 </Footer>
-            </Layout> : <Layout>
+            </Layout>
+            :
+            <Layout>
                 <Header theme="light">
                     <Text className="big-text">🚚 Trackermaster</Text>
                 </Header>
@@ -60,3 +61,4 @@ const App = () => {
 };
 
 export default App;
+
