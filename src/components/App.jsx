@@ -46,14 +46,14 @@ const App = () => {
                 <Header theme="light">
                     <Text className="big-text">🚚 Trackermaster</Text>
                 </Header>
-                <Content theme="light" className="font" style={{backgroundColor: "#ffffff"}}>
+                <Content theme="light" className="font" style={{backgroundColor: "#dcdbf8"}}>
                     <Result
                         status="error"
                         title="Parece que nuestros servidores están teniendo problemas"
                         subTitle="Vuelve a intentarlo en unos momentos..."
                     />
                 </Content>
-                <Footer className="font" style={{textAlign: 'center', backgroundColor: "#ffffff"}}>
+                <Footer className="font" style={{textAlign: 'center', backgroundColor: "#dcdbf8",  color: "#5e1fc6", fontWeight: "bold" }}>
                     ISST - Grupo08 - Curso 2021/22
                 </Footer>
             </Layout>}
