@@ -9,7 +9,7 @@ import CarrierHome from "./carrier/CarrierHome";
 
 const App = () => (
     <>
-        <Tabs centered size="large" defaultActiveKey="1">
+        <Tabs centered size="large" defaultActiveKey="1" className= "tabs">
             <TabPane tab="Soy receptor" key="1">
                 <RecipientHome/>
             </TabPane>
@@ -21,3 +21,4 @@ const App = () => (
 );
 
 export default App;
+
