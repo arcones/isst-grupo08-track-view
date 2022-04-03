@@ -29,7 +29,7 @@ const ParcelInfo = ({setParcelNumber, parcelStatus}) => (
         </div>
         <Divider/>
         <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-            <Button type="primary" danger onClick={() => setParcelNumber(undefined)}>Salir</Button>
+            <Button type="primary" danger onClick={() => setParcelNumber(undefined)} className="boton">Salir</Button>
         </div>
     </>
 );

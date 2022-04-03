@@ -16,7 +16,7 @@ const RecipientHome = () => {
                 status="warning"
                 title="No se ha encontrado el paquete"
                 extra={
-                    <Button type="primary" key="console" onClick={() => setParcelNumber(undefined)}>
+                    <Button type="primary" key="console" onClick={() => setParcelNumber(undefined)} className="boton">
                         Volver a intentarlo
                     </Button>
                 }
