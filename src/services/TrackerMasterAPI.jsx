@@ -3,6 +3,16 @@ import axios from "axios";
 const BASE_PATH = "http://localhost:8080";
 const TIMEOUT = 5000;
 
+export const healthCheck = () => {
+    const config = {
+        headers: {
+            "Access-Control-Allow-Origin": BASE_PATH,
+        },
+        timeout: TIMEOUT,
+    };
+    return axios.get(BASE_PATH + "/health", config)
+}
+
 export const getParcel = (trackingNumber) => {
     const config = {
         headers: {
@@ -32,10 +42,10 @@ export const carrierLogin = (user, password) => {
 };
 
 
-export const loadParcels = (parcels) => {
+export const loadParcels = (carrierName, parcels) => {
     const config = {
         data: parcels,
     };
 
-    return axios.post(BASE_PATH + `/parcels`, config);
+    return axios.post(BASE_PATH + `/parcels/${carrierName}`, config);
 };

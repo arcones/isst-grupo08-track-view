@@ -11,7 +11,7 @@ const CarrierLogin = ({credentials, setCredentials, checkCredentials, setUser, s
                     {credentials !== undefined && <Alert message="Las credenciales introducidas son incorrectas" type="error"/>}
                     <Input
                         size="large"
-                        placeholder="Usuario"
+                        placeholder="Usuario/a"
                         prefix={<UserOutlined/>}
                         onChange={event => {
                             setUser(event.target.value)
@@ -24,7 +24,7 @@ const CarrierLogin = ({credentials, setCredentials, checkCredentials, setUser, s
                             setPassword(event.target.value)
                             setCredentials(undefined)
                         }}/>
-                    <Button type="primary"  size="large" onClick={() => checkCredentials()}>Login</Button>
+                    <Button type="primary" size="large" onClick={() => checkCredentials()}>Login</Button>
                 </Space>
             </Col>
             <Col span={8}/>

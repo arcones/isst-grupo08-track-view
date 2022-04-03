@@ -9,6 +9,7 @@ import {loadParcels} from "../../services/TrackerMasterAPI";
 const {Dragger} = Upload;
 
 const CarrierDragger = ({carrierName, uploadOK, setUploadOK}) => {
+
     const props = {
         name: 'file',
         multiple: false,
@@ -29,7 +30,7 @@ const CarrierDragger = ({carrierName, uploadOK, setUploadOK}) => {
             reader.onload = e => {
                 CSVToJson().fromString(e.target.result)
                     .then(output => {
-                        loadParcels(output)
+                        loadParcels(carrierName, output)
                             .then(() => setUploadOK(true))
                             .catch(() => setUploadOK(false))
                     })

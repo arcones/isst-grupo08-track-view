@@ -28,7 +28,7 @@ const ParcelSearch = ({setParcelNumber, setParcelStatus}) => {
         <Row>
             <Col span={8}/>
             <Col span={8}>
-                <Input.Search size="large" allowClear placeholder="Introduza su número de pedido.."
+                <Input.Search size="large" allowClear placeholder="Introduza su número de pedido..."
                               onSearch={value => getParcelInfo(value)}/>
             </Col>
             <Col span={8}/>

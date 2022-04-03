@@ -23,7 +23,7 @@ const ParcelInfo = ({setParcelNumber, parcelStatus}) => (
                           description="Su paquete ha sido recogido por el repartidor que se lo entregará proximamente"/>
                     <Step title="Recibido" description="Su paquete fue entregado en su domicilio"/>
                     <Step title="Error en la entrega"
-                          description="Pongasé en contacto con el transportista"/>
+                          description="Póngase en contacto con el transportista"/>
                 </Steps>
             </Space>
         </div>

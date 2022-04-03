@@ -14,10 +14,6 @@ const CarrierUpload = ({carrierName, setCredentials}) => {
                             status="success"
                             title="¡Gracias! Paquetes cargados correctamente"
                             subTitle="Sus receptores podrán consultar el estado de sus paquetes a partir de ahora"
-                            extra={[
-                                <Button type="primary" key="console"
-                                        onClick={() => setCredentials(false)}>Salir</Button>
-                            ]}
                         />
                         : <CarrierDragger carrierName={carrierName} uploadOK={uploadOK} setUploadOK={setUploadOK}/>
                     }
@@ -25,7 +21,7 @@ const CarrierUpload = ({carrierName, setCredentials}) => {
             </div>
             <Divider/>
             <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-                <Button type="primary" danger onClick={() => setCredentials(null)}>Salir</Button>
+                <Button type="primary" danger onClick={() => setCredentials(undefined)}>Salir</Button>
             </div>
         </>
     )

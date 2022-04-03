@@ -1,6 +1,13 @@
 @import '~antd/dist/antd.css';
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 
-.text {
+
+.font {
     font-family: 'Noto Sans', sans-serif;
+}
+
+.big-text {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: bold;
+    color: cornflowerblue;
+    font-size: x-large;
 }
