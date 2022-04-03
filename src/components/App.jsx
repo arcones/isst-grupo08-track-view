@@ -37,7 +37,7 @@ const App = () => {
                         </TabPane>
                     </Tabs>
                 </Content>
-                <Footer className="font" style={{textAlign: 'center', backgroundColor: "#ffffff"}}>
+                <Footer className="font" style={{textAlign: 'center', backgroundColor: "#dcdbf8", color: "#5e1fc6", fontWeight: "bold" }}>
                     ISST - Grupo08 - Curso 2021/22
                 </Footer>
             </Layout>

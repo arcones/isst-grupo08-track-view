@@ -16,7 +16,7 @@ const CarrierLogin = ({credentials, setCredentials, checkCredentials, setUser, s
                         onChange={event => {
                             setUser(event.target.value)
                             setCredentials(undefined)
-                        } }className="bar"/>
+                        } } className="bar"/>
                     <Input.Password
                         size="large"
                         placeholder="Contraseña"
@@ -24,7 +24,7 @@ const CarrierLogin = ({credentials, setCredentials, checkCredentials, setUser, s
                             setPassword(event.target.value)
                             setCredentials(undefined)
                         }} className="bar"/>
-                    <Button type="primary"  size="large" onClick={() => checkCredentials()} className= "boton">Login</Button>
+                    <Button type="primary" size="large" onClick={() => checkCredentials()} className= "boton">Login</Button>
                 </Space>
             </Col>
             <Col span={8}/>

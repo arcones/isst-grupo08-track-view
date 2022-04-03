@@ -21,7 +21,7 @@ const CarrierUpload = ({carrierName, setCredentials}) => {
             </div>
             <Divider/>
             <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-                <Button type="primary" danger onClick={() => setCredentials(undefined)} className="boton">Salir</Button>
+                <Button type="primary" size="large" onClick={() => setCredentials(undefined)} className="boton">Salir</Button>
             </div>
         </>
     )

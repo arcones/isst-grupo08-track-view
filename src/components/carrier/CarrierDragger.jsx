@@ -49,7 +49,7 @@ const CarrierDragger = ({carrierName, uploadOK, setUploadOK}) => {
                     status="warning"
                     title="Ha habido problemas al cargar sus archivos"
                     extra={
-                        <Button type="primary" key="console" onClick={() => setUploadOK(undefined)} className="boton">
+                        <Button type="primary" key="console" size="large" onClick={() => setUploadOK(undefined)} className="boton">
                             Volver a intentarlo
                         </Button>
                     }
@@ -59,13 +59,13 @@ const CarrierDragger = ({carrierName, uploadOK, setUploadOK}) => {
                     <Card
                         style={{width: 240}}
                         cover={<img alt="example"
-                                    src="https://blog.boxme.asia/wp-content/uploads/2018/07/Cross-border-mobile.png"/>}
+                                    src="https://webmaxing.com/images/delivery.png"/>}
                     >
                         <Meta title={carrierName.toUpperCase()}
                               style={{display: "flex", alignItems: 'center', justifyContent: 'center'}}/>
                     </Card>
                     <Dragger {...props}>
-                        <p className="ant-upload-drag-icon">
+                        <p className="icon">
                             <InboxOutlined/>
                         </p>
                         <p className="ant-upload-text">Arrastre aquí sus ficheros</p>

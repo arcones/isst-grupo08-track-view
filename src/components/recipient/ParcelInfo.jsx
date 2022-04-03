@@ -11,7 +11,7 @@ const ParcelInfo = ({setParcelNumber, parcelStatus}) => (
                 <Card
                     style={{width: 240}}
                     cover={<img alt="example"
-                                src="https://www.cliparts101.com/files/731/88DF3569AABBD2AFA1182EFCA96323FF/parcel_01.png"/>}
+                                src="https://www.frankstonmelbournetaxi.com.au/wp-content/uploads/2020/08/Parcel-Delivery-768x768.png"/>}
                 >
                     <Meta title="ÉXITO" description="Su paquete ha sido localizado"
                           style={{display: "flex", alignItems: 'center', justifyContent: 'center'}}/>
@@ -29,7 +29,7 @@ const ParcelInfo = ({setParcelNumber, parcelStatus}) => (
         </div>
         <Divider/>
         <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-            <Button type="primary" danger onClick={() => setParcelNumber(undefined)} className="boton">Salir</Button>
+            <Button type="primary" size="large" onClick={() => setParcelNumber(undefined)} className="boton">Salir</Button>
         </div>
     </>
 );

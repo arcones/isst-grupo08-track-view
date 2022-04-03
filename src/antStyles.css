@@ -7,34 +7,78 @@
 .big-text {
     font-family: 'Noto Sans', sans-serif;
     font-weight: bold;
-    color: cornflowerblue;
+    color: #d3adf7;
     font-size: x-large;
 }
 
-body{background-color: #dcdbf8;}
+body {
+    background-color: #dcdbf8;
+}
 
 .tabs {
     color: #9254de;
     background-color: #dcdbf8;
 }
 
-.alert{
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn{
+    color: #5e1fc6;
+}
+
+.ant-tabs-tab-btn{
+    color: #9254de;
+}
+
+.ant-tabs-tab:hover {
+    color: #9254de !important;
+}
+
+.alert {
     background-color: #ffb4b4;
     border-color: #f78a8a;
 }
-.boton{
-    color: #d3adf7;
+
+.boton {
+    color: #d2bcf5;
     background-color: #8661b3;
-    /*border-width: 20;*/
+    border-width: 2px;
     border-color: #d3adf7;
-    
+    font-weight: bold;
 }
-.bar{
+
+.boton:hover {
+    color: #ffffff;
+    background-color: #8661b3;
+    border-width: 2px;
+    border-color: #d3adf7;
+}
+
+.bar {
     color: #d3adf7;
-    border-width: 20;
+    border-width: 2px;
     border-color: #9254de;
 }
+
 .text {
     font-family: 'Noto Sans', sans-serif;
     color: #ffff;
+}
+
+.icon {
+    color: #9254de;
+    font-size: 48px;
+    font-style: normal;
+    line-height: 0;
+    text-align: center;
+    text-transform: none;
+    text-rendering: optimizelegibility;
+}
+
+.ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):hover {
+    color: #5e1fc6 !important;
+    border-right-width: 1px;
+    z-index: 1;
+}
+
+.antd-wave-shadow-color {
+    color: #5e1fc6 !important;
 }
