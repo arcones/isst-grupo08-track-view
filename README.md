@@ -7,8 +7,3 @@ Run :runner: the application with:
 ```
 
 Once launched :rocket:, you can interact with it :arrows_counterclockwise: [here](http://localhost:3000)
-
-
-## TODOs
-- Custom color palette
-- Carrier not able to load parcels from other carriers
