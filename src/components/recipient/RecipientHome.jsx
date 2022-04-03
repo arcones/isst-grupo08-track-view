@@ -35,7 +35,7 @@ const RecipientHome = () => {
                 <Row>
                     <Col span={8}/>
                     <Col span={8}>
-                        <Input.Search allowClear placeholder="Introduza su número de pedido.." onSearch={value => {
+                        <Input.Search size="large" allowClear placeholder="Introduza su número de pedido.." onSearch={value => {
                             setParcelNumber(value)
                         }}/>
                     </Col>

@@ -34,14 +34,8 @@ export const carrierLogin = (user, password) => {
 
 export const loadParcels = (parcels) => {
     const config = {
-        headers: {
-            "Access-Control-Allow-Origin": BASE_PATH,
-            "Content-Type": "application/json",
-            Accept: "application/json",
-        },
-        body: parcels,
-        timeout: TIMEOUT,
+        data: parcels,
     };
 
-    return axios.get(BASE_PATH + `/parcels`, config);
+    return axios.post(BASE_PATH + `/parcels`, config);
 };

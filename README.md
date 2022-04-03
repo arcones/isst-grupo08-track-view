@@ -6,4 +6,4 @@
 - Add header with logo
 - Add footer
 - Custom color palette
-- Deprecated ReactDOM.render
+- Carrier not able to load parcels from other carriers

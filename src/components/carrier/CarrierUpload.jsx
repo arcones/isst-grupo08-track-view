@@ -1,39 +1,26 @@
-import React from "react";
-import { Upload, message } from 'antd';
-import { InboxOutlined } from '@ant-design/icons';
+import React, {useState} from "react";
+import {Space, Result, Button} from 'antd';
+import CarrierDragger from "./CarrierDragger";
 
-const { Dragger } = Upload;
+const CarrierUpload = ({carrierName, setCredentials}) => {
+    const [uploadOK, setUploadOK] = useState()
 
-const CarrierUpload = () => {
-    const props = {
-        name: 'file',
-        multiple: true,
-        action: 'https://www.mocky.io/v2/5cc8019d300000980a055e76',
-        onChange(info) {
-            const { status } = info.file;
-            if (status !== 'uploading') {
-                console.log(info.file, info.fileList);
-            }
-            if (status === 'done') {
-                message.success(`${info.file.name} file uploaded successfully.`);
-            } else if (status === 'error') {
-                message.error(`${info.file.name} file upload failed.`);
-            }
-        },
-        onDrop(e) {
-            console.log('Dropped files', e.dataTransfer.files);
-        },
-    };
     return (
-        <>
-            <Dragger {...props}>
-                <p className="ant-upload-drag-icon">
-                    <InboxOutlined/>
-                </p>
-                <p className="ant-upload-text">Arrastre aquí sus ficheros</p>
-
-            </Dragger>
-        </>
+        <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+            <Space direction="horizontal" align="center" size="large" style={{display: 'flex'}}>
+                {uploadOK === true ?
+                    <Result
+                        status="success"
+                        title="¡Gracias! Paquetes cargados correctamente"
+                        subTitle="Sus receptores podrán consultar el estado de sus paquetes a partir de ahora"
+                        extra={[
+                            <Button type="primary" key="console" onClick={() => setCredentials(false)}>Salir</Button>
+                        ]}
+                    />
+                    : <CarrierDragger carrierName={carrierName} uploadOK={uploadOK} setUploadOK={setUploadOK}/>
+                }
+            </Space>
+        </div>
     )
 };
 

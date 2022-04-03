@@ -1,13 +1,13 @@
 import React from 'react';
 import {Alert, Button, Col, Input, Space} from "antd";
-import {LockOutlined, UserOutlined} from "@ant-design/icons";
+import {UserOutlined} from "@ant-design/icons";
 
 const CarrierLogin = ({credentials, setCredentials, checkCredentials, setUser, setPassword}) => {
     return (
         <div style={{display: 'flex'}}>
             <Col span={8}/>
             <Col span={8}>
-                <Space direction="vertical" align="center" size="middle" style={{display: 'flex'}}>
+                <Space direction="vertical" align="center" size="large" style={{display: 'flex'}}>
                     {credentials !== undefined && <Alert message="Las credenciales introducidas son incorrectas" type="error"/>}
                     <Input
                         size="large"
@@ -24,7 +24,7 @@ const CarrierLogin = ({credentials, setCredentials, checkCredentials, setUser, s
                             setPassword(event.target.value)
                             setCredentials(undefined)
                         }}/>
-                    <Button type="primary" onClick={() => checkCredentials()}>Login</Button>
+                    <Button type="primary"  size="large" onClick={() => checkCredentials()}>Login</Button>
                 </Space>
             </Col>
             <Col span={8}/>

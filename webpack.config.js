@@ -26,12 +26,12 @@ module.exports = {
                 test: /\.(scss|sass)$/,
                 use: ['style-loader', 'css-loader', 'sass-loader']
             },
-        ]
+        ],
     },
     plugins: [
         new HTMLWebpackPlugin({
             template: path.join(publicPath, 'index.html'),
-            favicon:  path.join(publicPath, 'favicon.ico'),
+            favicon: path.join(publicPath, 'favicon.ico'),
         })
     ],
     devServer: {
@@ -40,5 +40,5 @@ module.exports = {
     },
     resolve: {
         extensions: ['.js', '.jsx']
-    }
+    },
 }

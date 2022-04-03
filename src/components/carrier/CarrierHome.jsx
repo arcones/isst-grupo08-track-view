@@ -27,7 +27,7 @@ const CarrierHome = () => {
                     setPassword={setPassword}
                 />
             }
-            {credentials && <CarrierUpload/>}
+            {credentials && <CarrierUpload carrierName={user} setCredentials={setCredentials}/>}
         </>
     )
 };
