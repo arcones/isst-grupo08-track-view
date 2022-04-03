@@ -1,6 +1,31 @@
 @import '~antd/dist/antd.css';
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 
+body{background-color: #dcdbf8;}
+
+.tabs {
+    color: #9254de;
+    background-color: #dcdbf8;
+}
+
+.alert{
+    background-color: #ffb4b4;
+    border-color: #f78a8a;
+}
+.boton{
+    color: #d3adf7;
+    background-color: #8661b3;
+    border-width: 20;
+    border-color: #d3adf7;
+    
+}
+.bar{
+    color: #d3adf7;
+    border-width: 20;
+    border-color: #9254de;
+}
 .text {
     font-family: 'Noto Sans', sans-serif;
+    color: #ffff;
 }
+
