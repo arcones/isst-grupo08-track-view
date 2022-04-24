@@ -1,4 +1,4 @@
-# isst-grupo08-track-view mailbox :mailbox:
+# isst-grupo08-track-view :mailbox:
 
 Run :runner: the application with:
 
