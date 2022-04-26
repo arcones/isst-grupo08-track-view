@@ -3,7 +3,6 @@ import {useState} from "react";
 import CarrierUpload from "./CarrierUpload";
 import {carrierLogin} from "../../services/TrackerMasterAPI";
 import CarrierLogin from "./CarrierLogin";
-import {Button} from "antd";
 
 const CarrierHome = () => {
 
@@ -13,8 +12,8 @@ const CarrierHome = () => {
 
     const checkCredentials = () => {
         carrierLogin(user, password)
-            .then(response => setCredentials(true))
-            .catch(response => setCredentials(false))
+            .then(() => setCredentials(true))
+            .catch(() => setCredentials(false))
     }
 
     return (

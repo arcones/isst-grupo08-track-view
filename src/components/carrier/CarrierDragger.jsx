@@ -1,10 +1,10 @@
-import React, {useState} from "react";
-import {Upload, message, Image, Card, Space, Result, Alert, Button} from 'antd';
+import React from "react";
+import {Button, message, Result, Space, Upload} from 'antd';
 import {InboxOutlined} from '@ant-design/icons';
-import Meta from "antd/es/card/Meta";
 
 import CSVToJson from 'csvtojson'
 import {loadParcels} from "../../services/TrackerMasterAPI";
+import Title from "antd/es/typography/Title";
 
 const {Dragger} = Upload;
 
@@ -43,27 +43,21 @@ const CarrierDragger = ({carrierName, uploadOK, setUploadOK}) => {
 
 
     return (
-        <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+        <>
             {uploadOK === false ?
                 <Result
                     status="warning"
                     title="Ha habido problemas al cargar sus archivos"
                     extra={
-                        <Button type="primary" key="console" size="large" onClick={() => setUploadOK(undefined)} className="boton">
+                        <Button type="primary" key="console" size="large" onClick={() => setUploadOK(undefined)}
+                                className="boton">
                             Volver a intentarlo
                         </Button>
                     }
                 />
                 :
-                <Space direction="horizontal" align="center" size="large" style={{display: 'flex'}}>
-                    <Card
-                        style={{width: 240}}
-                        cover={<img alt="example"
-                                    src="https://webmaxing.com/images/delivery.png"/>}
-                    >
-                        <Meta title={carrierName.toUpperCase()}
-                              style={{display: "flex", alignItems: 'center', justifyContent: 'center'}}/>
-                    </Card>
+                <Space direction="vertical" size="large" style={{ display: 'flex' }}>
+                    <Title type="danger">Hola {carrierName}!</Title>
                     <Dragger {...props}>
                         <p className="icon">
                             <InboxOutlined/>
@@ -75,7 +69,7 @@ const CarrierDragger = ({carrierName, uploadOK, setUploadOK}) => {
                     </Dragger>
                 </Space>
             }
-        </div>
+        </>
     )
 };
 
