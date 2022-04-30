@@ -2,6 +2,7 @@ import axios from "axios";
 
 const BASE_PATH = "https://isst-grupo08-track-controller.herokuapp.com";
 //const BASE_PATH = "http://localhost:8080";
+
 const TIMEOUT = 5000;
 
 export const healthCheck = () => {
