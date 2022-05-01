@@ -1,35 +1,40 @@
 import React from "react";
 import {useState} from "react";
-import CarrierUpload from "./CarrierUpload";
-import {carrierLogin} from "../../services/TrackerMasterAPI";
-import CarrierLogin from "./CarrierLogin";
+import {userLogin} from "../../services/TrackerMasterAPI";
+import UserLogin from "./UserLogin";
+import CarrierUpload from "../carrier/CarrierUpload";
+import RecipientHome from "../recipient/RecipientHome";
 
-const CarrierHome = () => {
+const UserHome = ({role}) => {
 
     const [user, setUser] = useState()
     const [password, setPassword] = useState()
     const [credentials, setCredentials] = useState()
 
     const checkCredentials = () => {
-        carrierLogin(user, password)
+        userLogin(user, password)
             .then(() => setCredentials(true))
             .catch(() => setCredentials(false))
     }
 
     return (
         <>
-            {!credentials &&
-                <CarrierLogin
+            {!credentials ?
+                <UserLogin
                     credentials={credentials}
                     setCredentials={setCredentials}
                     checkCredentials={checkCredentials}
                     setUser={setUser}
                     setPassword={setPassword}
                 />
+                :
+                role === "Carrier" ?
+                    <CarrierUpload carrierName={user} setCredentials={setCredentials}/>
+                    :
+                    <RecipientHome/>
             }
-            {credentials && <CarrierUpload carrierName={user} setCredentials={setCredentials}/>}
         </>
     )
 };
 
-export default CarrierHome;
+export default UserHome;

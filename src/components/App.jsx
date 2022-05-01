@@ -1,11 +1,10 @@
 import React, {useEffect, useState} from 'react';
 import {Layout, PageHeader, Result, Tabs} from 'antd';
 import '../antdStyles.less'
-import RecipientHome from "./recipient/RecipientHome";
-import CarrierHome from "./carrier/CarrierHome";
 import {Content} from "antd/es/layout/layout";
 import {healthCheck} from "../services/TrackerMasterAPI";
 import Title from "antd/es/typography/Title";
+import UserHome from "./common/UserHome";
 
 const {TabPane} = Tabs;
 
@@ -30,10 +29,10 @@ const App = () => {
                 {serverHealth ?
                     <Tabs centered size="large" defaultActiveKey="1" className="tabs">
                         <TabPane tab="Soy receptor/a" key="1">
-                            <RecipientHome/>
+                            <UserHome role="Recipient"/>
                         </TabPane>
                         <TabPane tab="Soy transportista" key="2">
-                            <CarrierHome/>
+                            <UserHome role="Carrier"/>
                         </TabPane>
                     </Tabs>
                     :

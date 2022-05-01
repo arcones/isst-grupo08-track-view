@@ -1,29 +1,7 @@
-import React, {useState} from "react";
-import {Button, Result} from 'antd';
-import ParcelInfo from "./ParcelInfo";
-import ParcelSearch from "./ParcelSearch";
-
+import React from "react";
 
 const RecipientHome = () => {
-    const [parcelNumber, setParcelNumber] = useState();
-    const [parcelStatus, setParcelStatus] = useState()
-
-    switch (parcelNumber) {
-        case undefined:
-            return <ParcelSearch setParcelNumber={setParcelNumber} setParcelStatus={setParcelStatus}/>
-        case 'WRONG':
-            return <Result
-                status="warning"
-                title="No se ha encontrado el paquete"
-                extra={
-                    <Button type="primary" size="large" key="console" onClick={() => setParcelNumber(undefined)} className="boton">
-                        Volver a intentarlo
-                    </Button>
-                }
-            />
-        default:
-            return <ParcelInfo setParcelNumber={setParcelNumber} parcelStatus={parcelStatus}/>
-    }
+    return <div>Aqui se va a mostrar un tablita con los paquetes de esta usuaria</div>
 };
 
 export default RecipientHome;

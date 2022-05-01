@@ -1,7 +1,6 @@
 import axios from "axios";
 
 const BASE_PATH = "https://isst-grupo08-track-controller.herokuapp.com";
-//const BASE_PATH = "http://localhost:8080";
 
 const TIMEOUT = 5000;
 
@@ -28,7 +27,7 @@ export const getParcel = (trackingNumber) => {
     return axios.get(BASE_PATH + `/parcels/${trackingNumber}`, config);
 };
 
-export const carrierLogin = (user, password) => {
+export const userLogin = (user, password) => {
     const config = {
         headers: {
             "Access-Control-Allow-Origin": BASE_PATH,
@@ -40,7 +39,7 @@ export const carrierLogin = (user, password) => {
         timeout: TIMEOUT,
     };
 
-    return axios.get(BASE_PATH + `/carriers`, config);
+    return axios.get(BASE_PATH + `/login`, config);
 };
 
 

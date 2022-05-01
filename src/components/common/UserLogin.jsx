@@ -2,7 +2,7 @@ import React from 'react';
 import {Alert, Button, Col, Input, Space} from "antd";
 import {UserOutlined} from "@ant-design/icons";
 
-const CarrierLogin = ({credentials, setCredentials, checkCredentials, setUser, setPassword}) => {
+const UserLogin = ({credentials, setCredentials, checkCredentials, setUser, setPassword}) => {
     return (
         <div style={{display: 'flex'}}>
             <Col span={8}/>
@@ -11,7 +11,7 @@ const CarrierLogin = ({credentials, setCredentials, checkCredentials, setUser, s
                     {credentials !== undefined && <Alert message="Las credenciales introducidas son incorrectas" type="error" className="alert"/>}
                     <Input
                         size="large"
-                        placeholder="Usuario/a"
+                        placeholder="Usuaria/o"
                         prefix={<UserOutlined/>}
                         onChange={event => {
                             setUser(event.target.value)
@@ -24,7 +24,7 @@ const CarrierLogin = ({credentials, setCredentials, checkCredentials, setUser, s
                             setPassword(event.target.value)
                             setCredentials(undefined)
                         }} className="bar"/>
-                    <Button type="primary" size="large" onClick={() => checkCredentials()} className= "boton">Login</Button>
+                    <Button type="primary" size="large" onClick={() => checkCredentials()}>Login</Button>
                 </Space>
             </Col>
             <Col span={8}/>
@@ -32,4 +32,4 @@ const CarrierLogin = ({credentials, setCredentials, checkCredentials, setUser, s
     );
 }
 
-export default CarrierLogin;
+export default UserLogin;
