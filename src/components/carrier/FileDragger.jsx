@@ -4,7 +4,6 @@ import {InboxOutlined} from '@ant-design/icons';
 
 import CSVToJson from 'csvtojson'
 import {loadParcels} from "../../services/TrackerMasterAPI";
-import Title from "antd/es/typography/Title";
 
 const {Dragger} = Upload;
 
@@ -57,7 +56,6 @@ const FileDragger = ({carrierName, uploadOK, setUploadOK}) => {
                 />
                 :
                 <Space direction="vertical" size="large" style={{ display: 'flex' }}>
-                    <Title type="danger">Hola {carrierName}!</Title>
                     <Dragger {...props}>
                         <p className="icon">
                             <InboxOutlined/>

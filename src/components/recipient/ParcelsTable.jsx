@@ -1,7 +1,9 @@
 import React from "react";
-import {Table} from "antd";
+import {Button, Layout, PageHeader, Table} from "antd";
+import Title from "antd/es/typography/Title";
+import {Content, Footer} from "antd/es/layout/layout";
 
-const ParcelsTable = () => {
+const ParcelsTable = ({username, setCredentials}) => {
     const dataSource = [
         {
             key: '1',
@@ -36,7 +38,18 @@ const ParcelsTable = () => {
     ];
 
     return (
-        <Table dataSource={dataSource} columns={columns} />
+        <Layout className="background">
+            <PageHeader>
+                <Title type="danger">Hola {username}!</Title>
+            </PageHeader>
+            <Content>
+                <Table dataSource={dataSource} columns={columns} pagination={false}
+                       title={() => 'Aquí está el resumen de tus pedidos'}/>
+            </Content>
+            <Footer className="background">
+                <Button type="primary" size="large" onClick={() => setCredentials(undefined)} className="boton">Salir</Button>
+            </Footer>
+        </Layout>
     )
 };
 

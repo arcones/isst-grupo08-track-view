@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 import {userLogin} from "../../services/TrackerMasterAPI";
-import {Upload} from "antd";
 import ParcelsTable from "../recipient/ParcelsTable";
 import UserLogin from "./UserLogin";
+import Load from "../carrier/Load";
 
 const UserHome = ({role}) => {
 
@@ -28,9 +28,9 @@ const UserHome = ({role}) => {
                 />
                 :
                 role === "Carrier" ?
-                    <Upload carrierName={user} setCredentials={setCredentials}/>
+                    <Load carrierName={user} setCredentials={setCredentials}/>
                     :
-                    <ParcelsTable/>
+                    <ParcelsTable username={user} setCredentials={setCredentials}/>
             }
         </>
     )
