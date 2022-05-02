@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 import {Space, Result, Button, Divider} from 'antd';
-import CarrierDragger from "./CarrierDragger";
+import FileDragger from "./FileDragger";
 
-const CarrierUpload = ({carrierName, setCredentials}) => {
+const Upload = ({carrierName, setCredentials}) => {
     const [uploadOK, setUploadOK] = useState()
 
     return (
@@ -15,7 +15,7 @@ const CarrierUpload = ({carrierName, setCredentials}) => {
                             title="¡Gracias! Paquetes cargados correctamente"
                             subTitle="Sus receptores podrán consultar el estado de sus paquetes a partir de ahora"
                         />
-                        : <CarrierDragger carrierName={carrierName} uploadOK={uploadOK} setUploadOK={setUploadOK}/>
+                        : <FileDragger carrierName={carrierName} uploadOK={uploadOK} setUploadOK={setUploadOK}/>
                     }
                 </Space>
             </div>
@@ -27,4 +27,4 @@ const CarrierUpload = ({carrierName, setCredentials}) => {
     )
 };
 
-export default CarrierUpload;
+export default Upload;

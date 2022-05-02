@@ -8,7 +8,7 @@ import Title from "antd/es/typography/Title";
 
 const {Dragger} = Upload;
 
-const CarrierDragger = ({carrierName, uploadOK, setUploadOK}) => {
+const FileDragger = ({carrierName, uploadOK, setUploadOK}) => {
 
     const props = {
         name: 'file',
@@ -73,4 +73,4 @@ const CarrierDragger = ({carrierName, uploadOK, setUploadOK}) => {
     )
 };
 
-export default CarrierDragger;
+export default FileDragger;

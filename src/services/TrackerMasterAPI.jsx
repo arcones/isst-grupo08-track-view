@@ -14,7 +14,7 @@ export const healthCheck = () => {
     return axios.get(BASE_PATH + "/health", config)
 }
 
-export const getParcel = (trackingNumber) => {
+export const getParcel = (username) => {
     const config = {
         headers: {
             "Access-Control-Allow-Origin": BASE_PATH,
@@ -24,7 +24,7 @@ export const getParcel = (trackingNumber) => {
         timeout: TIMEOUT,
     };
 
-    return axios.get(BASE_PATH + `/parcels/${trackingNumber}`, config);
+    return axios.get(BASE_PATH + `/parcels/${username}`, config);
 };
 
 export const userLogin = (user, password) => {
