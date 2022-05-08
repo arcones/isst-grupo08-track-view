@@ -41,12 +41,3 @@ export const userLogin = (user, password) => {
 
     return axios.get(BASE_PATH + `/login`, config);
 };
-
-
-export const loadParcels = (carrierName, parcels) => {
-    const config = {
-        data: parcels,
-    };
-
-    return axios.post(BASE_PATH + `/parcels/${carrierName}`, config);
-};
