@@ -17,7 +17,7 @@ const App = () => {
             healthCheck()
                 .then(() => setServerHealth(true))
                 .catch(() => setServerHealth(false))
-        }, 1000)
+        }, 60000)
     }, [serverHealth])
 
     return (<>

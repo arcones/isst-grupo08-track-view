@@ -14,7 +14,7 @@ export const healthCheck = () => {
     return axios.get(BASE_PATH + "/health", config)
 }
 
-export const getParcel = (username) => {
+export const getParcels = (username) => {
     const config = {
         headers: {
             "Access-Control-Allow-Origin": BASE_PATH,
@@ -31,8 +31,6 @@ export const userLogin = (user, password) => {
     const config = {
         headers: {
             "Access-Control-Allow-Origin": BASE_PATH,
-            "Content-Type": "application/json",
-            Accept: "application/json",
             User: user,
             Password: password
         },
